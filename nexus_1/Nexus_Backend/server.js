@@ -17,7 +17,7 @@ app.post('/',controller.AddBorrower);
 app.get('/get',controller.getAllBorrow);
 
 const SERVER_DB_URI=process.env.DB_URI;
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const bootstrap = async () => {
   try {
     await mongoose.connect(SERVER_DB_URI);
