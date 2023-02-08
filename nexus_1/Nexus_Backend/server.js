@@ -20,7 +20,7 @@ const SERVER_DB_URI=process.env.DB_URI;
 const PORT = process.env.PORT || 3000;
 const bootstrap = async () => {
   try {
-    await mongoose.connect(mongodb+srv://VerifyX:Ns8NqVXwPC8NCWmb@cluster0.gp3sbx9.mongodb.net);
+    await mongoose.connect("mongodb+srv://VerifyX:Ns8NqVXwPC8NCWmb@cluster0.gp3sbx9.mongodb.net");
     app.listen(PORT, async () => {
       console.log("Listening at ",PORT);
     });
